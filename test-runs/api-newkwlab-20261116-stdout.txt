@@ -1,0 +1,13 @@
+Checking https://api.newkwlab.com …
+✅ [Raw HTML] GPTBot can fetch the homepage (5/5) — GPTBot received HTTP 200.
+✅ [robots.txt] robots.txt exists (10/10) — Found and parsed.
+✅ [robots.txt] AI crawlers are allowed (15/15) — All 6 major AI crawlers may crawl /: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended.
+⚠️ [llms.txt] llms.txt exists and is usable (20/25) — Present but thin: H1=yes, 0 links, 339 words.
+✅ [sitemap.xml] Sitemap lists reachable pages (15/15) — 9 URLs listed in https://api.newkwlab.com/sitemap.xml. Sample check: 5/5 of the first URLs answer HTTP 200.
+✅ [Raw HTML] Page has a <title> (5/5) — Title: “NewKWLab — Small tools, finished results”
+✅ [Raw HTML] Page has a meta description (5/5) — Present.
+✅ [Raw HTML] Page has exactly one clear H1 (5/5) — H1: “Small tools. Finished results.”
+✅ [Raw HTML] Real content ships in the raw HTML (10/10) — 475 words of text are in the raw HTML — AI crawlers read it without running JavaScript.
+✅ [Raw HTML] Canonical URL is declared (5/5) — Present.
+
+Score: 95/100 (grade A) · reports in ./report.md and report.html

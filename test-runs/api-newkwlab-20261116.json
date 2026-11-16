@@ -1,0 +1,97 @@
+{
+  "url": "https://api.newkwlab.com",
+  "score": 95,
+  "facts": {
+    "gptbot_http_status": 200,
+    "homepage_http_status": 200,
+    "robots_sitemaps": [
+      "https://api.newkwlab.com/sitemap.xml"
+    ],
+    "llms_links": 0,
+    "sitemap_url_count": 9,
+    "homepage_words": 475,
+    "title": "NewKWLab \u2014 Small tools, finished results"
+  },
+  "checks": [
+    {
+      "group": "Raw HTML",
+      "name": "GPTBot can fetch the homepage",
+      "status": "pass",
+      "points": 5,
+      "max_points": 5,
+      "detail": "GPTBot received HTTP 200."
+    },
+    {
+      "group": "robots.txt",
+      "name": "robots.txt exists",
+      "status": "pass",
+      "points": 10,
+      "max_points": 10,
+      "detail": "Found and parsed."
+    },
+    {
+      "group": "robots.txt",
+      "name": "AI crawlers are allowed",
+      "status": "pass",
+      "points": 15.0,
+      "max_points": 15,
+      "detail": "All 6 major AI crawlers may crawl /: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended."
+    },
+    {
+      "group": "llms.txt",
+      "name": "llms.txt exists and is usable",
+      "status": "warn",
+      "points": 20,
+      "max_points": 25,
+      "detail": "Present but thin: H1=yes, 0 links, 339 words."
+    },
+    {
+      "group": "sitemap.xml",
+      "name": "Sitemap lists reachable pages",
+      "status": "pass",
+      "points": 15,
+      "max_points": 15,
+      "detail": "9 URLs listed in https://api.newkwlab.com/sitemap.xml. Sample check: 5/5 of the first URLs answer HTTP 200."
+    },
+    {
+      "group": "Raw HTML",
+      "name": "Page has a <title>",
+      "status": "pass",
+      "points": 5,
+      "max_points": 5,
+      "detail": "Title: \u201cNewKWLab \u2014 Small tools, finished results\u201d"
+    },
+    {
+      "group": "Raw HTML",
+      "name": "Page has a meta description",
+      "status": "pass",
+      "points": 5,
+      "max_points": 5,
+      "detail": "Present."
+    },
+    {
+      "group": "Raw HTML",
+      "name": "Page has exactly one clear H1",
+      "status": "pass",
+      "points": 5,
+      "max_points": 5,
+      "detail": "H1: \u201cSmall tools. Finished results.\u201d"
+    },
+    {
+      "group": "Raw HTML",
+      "name": "Real content ships in the raw HTML",
+      "status": "pass",
+      "points": 10,
+      "max_points": 10,
+      "detail": "475 words of text are in the raw HTML \u2014 AI crawlers read it without running JavaScript."
+    },
+    {
+      "group": "Raw HTML",
+      "name": "Canonical URL is declared",
+      "status": "pass",
+      "points": 5,
+      "max_points": 5,
+      "detail": "Present."
+    }
+  ]
+}
