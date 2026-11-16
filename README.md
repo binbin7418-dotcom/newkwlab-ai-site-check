@@ -68,6 +68,34 @@ Search now has two audiences. People still Google — but they also ask ChatGPT,
 
 Scores grade A (≥85) to F (<30). The checks encode the rule we now apply to every site we ship: real content in the raw HTML, an explicit welcome for AI crawlers, a complete sitemap, and an llms.txt that introduces the site.
 
+## A complete sample report
+
+So you can see exactly what you get before you run anything, here is a full
+report — our own production site, checked with this tool on 2026-11-16:
+
+**https://api.newkwlab.com — Score: 95/100 (grade A)** · 10 checks: 9 pass, 1 warning, 0 fail
+
+| Area | Result |
+| --- | --- |
+| robots.txt | ✅ 25/25 — file found; all 6 major AI crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended) allowed to crawl `/` |
+| llms.txt | ⚠️ 20/25 — present with a valid H1, but thin: 0 links, 339 words |
+| sitemap.xml | ✅ 15/15 — 9 URLs listed; sample check 5/5 answer HTTP 200 |
+| Raw HTML | ✅ 35/35 — GPTBot fetches HTTP 200; title, meta description, single H1 and canonical present; 475 words of real text in the raw HTML |
+
+**Key finding:** the only lost points come from the `llms.txt` — it introduces
+the site in prose but links to none of its pages, so AI readers get a summary
+with no map.
+
+**Action plan (from the same report):** add one markdown link per page to
+`llms.txt` (the 9 sitemap URLs, one-line description each) → llms.txt 20/25 →
+25/25 and the score 95 → 100; change nothing else; re-run the checker to
+confirm the new score on a dated run.
+
+📄 **[Read the full sample report](SAMPLE-REPORT-FULL.md)** — every check
+itemised with its evidence, findings ordered by impact, and the full action
+plan. The machine output of the same run lives in `test-runs/`
+(`api-newkwlab-20261116-report.md` / `.json` / `-stdout.txt`).
+
 ## Found a problem? Generate a starter llms.txt
 
 ```bash
